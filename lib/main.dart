@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_code/InheritedWidget/InheritedCount.dart';
+import 'package:flutter_code/MaterialAppExample/MaterialAppExample.dart';
+import 'package:flutter_code/ScaffoldExample/ScaffoldExample.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,6 +29,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
+      debugShowCheckedModeBanner: false,
       home: MyHomePage(title: 'Flutter Demos'),
     );
   }
@@ -56,7 +59,12 @@ class _MyHomePageState extends State<MyHomePage> {
     {
       "title": "InheritedWidgetDemo",
       "page": InheritedCount()
-    }
+    },
+    {
+      "title": "MaterialAppExample",
+      "page": MaterialAppExample()
+    },
+
   ];
 
   @override
@@ -75,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: ListView.builder(
         itemBuilder: (context, index) {
-          return FlatButton(
+          return TextButton(
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (_) => _dataList[index]["page"]));
             },
