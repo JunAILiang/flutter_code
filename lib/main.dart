@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_code/AppBarExample/AppBarExample.dart';
 import 'package:flutter_code/InheritedWidget/InheritedCount.dart';
 import 'package:flutter_code/MaterialAppExample/MaterialAppExample.dart';
 import 'package:flutter_code/ScaffoldExample/ScaffoldExample.dart';
+import 'package:flutter_code/TabBarExample/TabBarExample.dart';
 
 void main() {
   runApp(MyApp());
@@ -63,6 +65,10 @@ class _MyHomePageState extends State<MyHomePage> {
     {
       "title": "MaterialAppExample",
       "page": MaterialAppExample()
+    },
+    {
+      "title": "ScaffoldExample",
+      "page": ScaffoldExample()
     },
 
   ];
