@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_code/AlignExample/AlignExample.dart';
+import 'package:flutter_code/AnimatedAlignExample/AnimatedAlignExample.dart';
+import 'package:flutter_code/AnimatedPaddingExample/AnimatedPaddingExample.dart';
 import 'package:flutter_code/AppBarExample/AppBarExample.dart';
 import 'package:flutter_code/InheritedWidget/InheritedCount.dart';
 import 'package:flutter_code/MaterialAppExample/MaterialAppExample.dart';
+import 'package:flutter_code/PaddingExample/PaddingExample.dart';
 import 'package:flutter_code/ScaffoldExample/ScaffoldExample.dart';
 import 'package:flutter_code/TabBarExample/TabBarExample.dart';
 
@@ -70,7 +74,10 @@ class _MyHomePageState extends State<MyHomePage> {
       "title": "ScaffoldExample",
       "page": ScaffoldExample()
     },
-
+    {
+      "title": "AppBarExample",
+      "page": AppBarExample()
+    }
   ];
 
   @override
