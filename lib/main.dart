@@ -3,11 +3,14 @@ import 'package:flutter_code/AlignExample/AlignExample.dart';
 import 'package:flutter_code/AnimatedAlignExample/AnimatedAlignExample.dart';
 import 'package:flutter_code/AnimatedPaddingExample/AnimatedPaddingExample.dart';
 import 'package:flutter_code/AppBarExample/AppBarExample.dart';
+import 'package:flutter_code/AspectRatioExample/AspectRatioExample.dart';
 import 'package:flutter_code/ConstrainedExample/ConstrainedExample.dart';
 import 'package:flutter_code/InheritedWidget/InheritedCount.dart';
 import 'package:flutter_code/MaterialAppExample/MaterialAppExample.dart';
+import 'package:flutter_code/OverflowBoxExample/OverflowBoxExample.dart';
 import 'package:flutter_code/PaddingExample/PaddingExample.dart';
 import 'package:flutter_code/ScaffoldExample/ScaffoldExample.dart';
+import 'package:flutter_code/SizeBoxExample/SizeBoxExample.dart';
 import 'package:flutter_code/TabBarExample/TabBarExample.dart';
 
 void main() {
@@ -103,6 +106,19 @@ class _MyHomePageState extends State<MyHomePage> {
       "title": "ConstrainedExample",
       "page": ConstrainedExample()
     },
+    {
+      "title": "SizeBoxExample",
+      "page": SizeBoxExample()
+    },
+    {
+      "title": "OverflowBoxExample",
+      "page": OverflowBoxExample()
+    },
+    {
+      "title": "AspectRatioExample",
+      "page": AspectRatioExample()
+    },
+
 
   ];
 
