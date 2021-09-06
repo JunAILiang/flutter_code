@@ -5,6 +5,7 @@ import 'package:flutter_code/AnimatedAlignExample/AnimatedAlignExample.dart';
 import 'package:flutter_code/AnimatedPaddingExample/AnimatedPaddingExample.dart';
 import 'package:flutter_code/AppBarExample/AppBarExample.dart';
 import 'package:flutter_code/AspectRatioExample/AspectRatioExample.dart';
+import 'package:flutter_code/CenterExample/CenterExample.dart';
 import 'package:flutter_code/ClipOvalExample/ClipOvalExample.dart';
 import 'package:flutter_code/ClipRectExample/ClipRectExample.dart';
 import 'package:flutter_code/ConstrainedExample/ConstrainedExample.dart';
@@ -84,14 +85,19 @@ class _ContainerPageState extends State<ContainerPage> with AutomaticKeepAliveCl
       "title": "Container",
       "page": ContainerExample()
     },
-    // {
-    //   "title": "ClipRect",
-    //   "page": ClipRectExample()
-    // },
-    // {
-    //   "title": "ClipOval",
-    //   "page": ClipOvalExample()
-    // },
+    {
+      "title": "ClipRect",
+      "page": ClipRectExample()
+    },
+    {
+      "title": "ClipOval",
+      "page": ClipOvalExample()
+    },
+    {
+      "title": "Center",
+      "page": CenterExample()
+    },
+
   ];
 
   @override
