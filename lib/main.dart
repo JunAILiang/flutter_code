@@ -1,42 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_code/AlignExample/AlignExample.dart';
-import 'package:flutter_code/AnimatedAlignExample/AnimatedAlignExample.dart';
-import 'package:flutter_code/AnimatedPaddingExample/AnimatedPaddingExample.dart';
-import 'package:flutter_code/AppBarExample/AppBarExample.dart';
-import 'package:flutter_code/AspectRatioExample/AspectRatioExample.dart';
-import 'package:flutter_code/ConstrainedExample/ConstrainedExample.dart';
-import 'package:flutter_code/InheritedWidget/InheritedCount.dart';
-import 'package:flutter_code/MaterialAppExample/MaterialAppExample.dart';
-import 'package:flutter_code/OverflowBoxExample/OverflowBoxExample.dart';
-import 'package:flutter_code/PaddingExample/PaddingExample.dart';
-import 'package:flutter_code/ScaffoldExample/ScaffoldExample.dart';
-import 'package:flutter_code/SizeBoxExample/SizeBoxExample.dart';
-import 'package:flutter_code/TabBarExample/TabBarExample.dart';
+import 'package:flutter_code/container_page.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demos',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
         primarySwatch: Colors.blue,
-        // This makes the visual density adapt to the platform that you run
-        // the app on. For desktop platforms, the controls will be smaller and
-        // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
@@ -47,16 +22,6 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
   final String title;
 
   @override
@@ -65,87 +30,30 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  List _dataList = [
-    {
-      "title": "InheritedWidgetDemo",
-      "page": InheritedCount()
-    },
-    {
-      "title": "MaterialAppExample",
-      "page": MaterialAppExample()
-    },
-    {
-      "title": "ScaffoldExample",
-      "page": ScaffoldExample()
-    },
-    {
-      "title": "AppBarExample",
-      "page": AppBarExample()
-    },
-    {
-      "title": "TabBarExample",
-      "page": TabBarExample()
-    },
-    {
-      "title": "PaddingExample",
-      "page": PaddingExample()
-    },
-    {
-      "title": "AnimatedPaddingExample",
-      "page": AnimatedPaddingExample()
-    },
-    {
-      "title": "AlignExample",
-      "page": AlignExample()
-    },
-    {
-      "title": "AnimatedAlignExample",
-      "page": AnimatedAlignExample()
-    },
-    {
-      "title": "ConstrainedExample",
-      "page": ConstrainedExample()
-    },
-    {
-      "title": "SizeBoxExample",
-      "page": SizeBoxExample()
-    },
-    {
-      "title": "OverflowBoxExample",
-      "page": OverflowBoxExample()
-    },
-    {
-      "title": "AspectRatioExample",
-      "page": AspectRatioExample()
-    },
-
-
+  int _currentIndex = 0;
+  List<Widget> _pages = [
+    ContainerPage(),
+    Container()
   ];
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+      body: IndexedStack(
+        children: _pages,
+        index: _currentIndex,
       ),
-      body: ListView.builder(
-        itemBuilder: (context, index) {
-          return TextButton(
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (_) => _dataList[index]["page"]));
-            },
-            child: Text(_dataList[index]["title"]),
-          );
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.ac_unit), label: "容器类组件"),
+          BottomNavigationBarItem(icon: Icon(Icons.ac_unit), label: "更多"),
+        ],
+        currentIndex: _currentIndex,
+        onTap: (currentIndex){
+          setState(() {
+            _currentIndex = currentIndex;
+          });
         },
-        itemCount: _dataList.length,
       ),
     );
   }
