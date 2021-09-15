@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_code/InheritedWidget/InheritedState.dart';
+import 'package:flutter_code/container_widgets/InheritedWidget/InheritedState.dart';
 
 class InheritedCount extends StatefulWidget {
   @override

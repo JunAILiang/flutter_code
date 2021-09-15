@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_code/ClipRectExample/ClipperPath.dart';
-import 'package:flutter_code/ClipRectExample/ClipperRPath.dart';
+import 'package:flutter_code/container_widgets/ClipRectExample/ClipperPath.dart';
+import 'package:flutter_code/container_widgets/ClipRectExample/ClipperRPath.dart';
 
 class ClipRectExample extends StatefulWidget {
   @override
@@ -14,6 +14,7 @@ class _ClipRectExampleState extends State<ClipRectExample> {
       appBar: AppBar(
         title: Text("ClipRectExample"),
       ),
+      backgroundColor: Colors.greenAccent,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -30,7 +31,7 @@ class _ClipRectExampleState extends State<ClipRectExample> {
             // ),
 
             ClipRRect(
-              // borderRadius: BorderRadius.all(Radius.circular(20)),
+              // borderRadius: BorderRadius.all(Radius.circular(150)),
               clipper: ClipperRPath(),
               child: Container(
                 color: Colors.purple,

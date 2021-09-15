@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_code/ClipOvalExample/ClipStarPath.dart';
-import 'package:flutter_code/ClipOvalExample/ClipperOvalPath.dart';
+import 'package:flutter_code/container_widgets/ClipOvalExample/ClipStarPath.dart';
+import 'package:flutter_code/container_widgets/ClipOvalExample/ClipperOvalPath.dart';
 
 class ClipOvalExample extends StatelessWidget {
   @override

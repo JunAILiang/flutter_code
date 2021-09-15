@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_code/basic_page.dart';
 import 'package:flutter_code/container_page.dart';
+import 'package:flutter_code/functional_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -33,7 +35,8 @@ class _MyHomePageState extends State<MyHomePage> {
   int _currentIndex = 0;
   List<Widget> _pages = [
     ContainerPage(),
-    Container()
+    BasicPage(),
+    FunctionalPage(),
   ];
 
   @override
@@ -46,7 +49,8 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.ac_unit), label: "容器类组件"),
-          BottomNavigationBarItem(icon: Icon(Icons.ac_unit), label: "更多"),
+          BottomNavigationBarItem(icon: Icon(Icons.ac_unit), label: "基础类组件"),
+          BottomNavigationBarItem(icon: Icon(Icons.ac_unit), label: "功能型组件"),
         ],
         currentIndex: _currentIndex,
         onTap: (currentIndex){

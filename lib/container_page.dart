@@ -1,22 +1,22 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_code/AlignExample/AlignExample.dart';
-import 'package:flutter_code/AnimatedAlignExample/AnimatedAlignExample.dart';
-import 'package:flutter_code/AnimatedPaddingExample/AnimatedPaddingExample.dart';
-import 'package:flutter_code/AppBarExample/AppBarExample.dart';
-import 'package:flutter_code/AspectRatioExample/AspectRatioExample.dart';
-// import 'package:flutter_code/CenterExample/CenterExample.dart';
-import 'package:flutter_code/ClipOvalExample/ClipOvalExample.dart';
-import 'package:flutter_code/ClipRectExample/ClipRectExample.dart';
-import 'package:flutter_code/ConstrainedExample/ConstrainedExample.dart';
-import 'package:flutter_code/ContainerExample/ContainerExample.dart';
-import 'package:flutter_code/InheritedWidget/InheritedCount.dart';
-import 'package:flutter_code/MaterialAppExample/MaterialAppExample.dart';
-import 'package:flutter_code/OverflowBoxExample/OverflowBoxExample.dart';
-import 'package:flutter_code/PaddingExample/PaddingExample.dart';
-import 'package:flutter_code/ScaffoldExample/ScaffoldExample.dart';
-import 'package:flutter_code/SizeBoxExample/SizeBoxExample.dart';
-import 'package:flutter_code/TabBarExample/TabBarExample.dart';
+import 'package:flutter_code/container_widgets/AlignExample/AlignExample.dart';
+import 'package:flutter_code/container_widgets/AnimatedAlignExample/AnimatedAlignExample.dart';
+import 'package:flutter_code/container_widgets/AnimatedPaddingExample/AnimatedPaddingExample.dart';
+import 'package:flutter_code/container_widgets/AppBarExample/AppBarExample.dart';
+import 'package:flutter_code/container_widgets/AspectRatioExample/AspectRatioExample.dart';
+import 'package:flutter_code/container_widgets/CenterExample/CenterExample.dart';
+import 'package:flutter_code/container_widgets/ClipOvalExample/ClipOvalExample.dart';
+import 'package:flutter_code/container_widgets/ClipRectExample/ClipRectExample.dart';
+import 'package:flutter_code/container_widgets/ConstrainedExample/ConstrainedExample.dart';
+import 'package:flutter_code/container_widgets/ContainerExample/ContainerExample.dart';
+import 'package:flutter_code/container_widgets/InheritedWidget/InheritedCount.dart';
+import 'package:flutter_code/container_widgets/MaterialAppExample/MaterialAppExample.dart';
+import 'package:flutter_code/container_widgets/OverflowBoxExample/OverflowBoxExample.dart';
+import 'package:flutter_code/container_widgets/PaddingExample/PaddingExample.dart';
+import 'package:flutter_code/container_widgets/ScaffoldExample/ScaffoldExample.dart';
+import 'package:flutter_code/container_widgets/SizeBoxExample/SizeBoxExample.dart';
+import 'package:flutter_code/container_widgets/TabBarExample/TabBarExample.dart';
 
 class ContainerPage extends StatefulWidget {
   @override
@@ -93,10 +93,10 @@ class _ContainerPageState extends State<ContainerPage> with AutomaticKeepAliveCl
       "title": "ClipOval",
       "page": ClipOvalExample()
     },
-    // {
-    //   "title": "Center",
-    //   "page": CenterExample()
-    // },
+    {
+      "title": "Center",
+      "page": CenterExample()
+    },
 
   ];
 

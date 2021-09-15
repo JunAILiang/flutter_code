@@ -13,8 +13,13 @@ class _CenterExampleState extends State<CenterExample> {
         title: Text("CenterExample"),
       ),
       body: Center(
-        child: Text("Jimi"),
-      ),
+        widthFactor: 3,
+        heightFactor: 2,
+        child: Container(
+          color: Colors.orange,
+          child: Text("Jimi"),
+        ),
+      )
     );
   }
 }
