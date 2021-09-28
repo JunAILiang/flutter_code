@@ -9,9 +9,9 @@ class ScaffoldExample extends StatefulWidget {
 class _ScaffoldExampleState extends State<ScaffoldExample> with SingleTickerProviderStateMixin {
 
   bool _isOpen = false;
-  AnimationController _animationController;
-  Animation<Color> _animationColor;
-  Animation<double> _animationIcon;
+  late AnimationController _animationController;
+  late Animation<Color?> _animationColor;
+  late Animation<double> _animationIcon;
   Curve _curve = Curves.easeOut;
 
   GlobalKey<ScaffoldState> _scaffoldStateKey = GlobalKey();
@@ -45,7 +45,7 @@ class _ScaffoldExampleState extends State<ScaffoldExample> with SingleTickerProv
   @override
   void dispose() {
     // TODO: implement dispose
-    _animationController?.dispose();
+    _animationController.dispose();
     super.dispose();
   }
 
@@ -56,7 +56,7 @@ class _ScaffoldExampleState extends State<ScaffoldExample> with SingleTickerProv
       appBar: AppBar(
         title: Text("ScaffoldExample"),
         leading: IconButton(onPressed: (){
-          _scaffoldStateKey.currentState.openDrawer();
+          _scaffoldStateKey.currentState?.openDrawer();
         }, icon: Icon(Icons.menu_open)),
       ),
       body: _pages[_currentIndex],

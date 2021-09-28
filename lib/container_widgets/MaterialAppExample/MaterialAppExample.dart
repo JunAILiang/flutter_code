@@ -91,12 +91,12 @@ class _MaterialAppExampleState extends State<MaterialAppExample> {
           Locale("zh", "CN"),
           Locale("en", "US")
         ],
-        localeListResolutionCallback: (List<Locale> locales, Iterable<Locale> supportedLocale) {
+        localeListResolutionCallback: (List<Locale>? locales, Iterable<Locale> supportedLocale) {
           print(locales);
           print(supportedLocale);
           return Locale("zh", "CN");
         },
-        localeResolutionCallback: (Locale locale, Iterable<Locale> supportedLocales) {
+        localeResolutionCallback: (Locale? locale, Iterable<Locale> supportedLocales) {
           print(locale);
           print(supportedLocales);
           return Locale("zh", "CN");
@@ -112,8 +112,9 @@ class _MaterialAppExampleState extends State<MaterialAppExample> {
 }
 
 class MyObsever extends NavigatorObserver {
+
   @override
-  void didPush(Route route, Route previousRoute) {
+  void didPush(Route route, Route? previousRoute) {
     // TODO: implement didPush
     print(route);
     print(previousRoute);
@@ -162,7 +163,7 @@ class _BState extends State<B> {
             onPressed: (){
               Navigator.pushNamed(context, "/AA");
             },
-            child: Text("PUSH A ${TestLocalizations.of(context).title}"),
+            child: Text("PUSH A ${TestLocalizations.of(context)?.title}"),
           )
       ),
     );
@@ -177,7 +178,7 @@ class TestLocalizations {
   bool isZh = false;
 
   // 为了方便获取的一个静态方法
-  static TestLocalizations of(BuildContext context) {
+  static TestLocalizations? of(BuildContext context) {
     return Localizations.of<TestLocalizations>(context, TestLocalizations);
   }
 

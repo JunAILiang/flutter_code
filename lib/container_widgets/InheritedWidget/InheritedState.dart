@@ -5,9 +5,9 @@ class InheritedState extends InheritedWidget {
 
   /// 构造方法
   InheritedState({
-    Key key,
-    @required this.count,
-    @required Widget child
+    Key? key,
+    required this.count,
+    required Widget child
   }): assert(count != null),
     super(key:key, child: child);
 
@@ -15,7 +15,7 @@ class InheritedState extends InheritedWidget {
   final int count;
 
   /// 获取组件最近当前的InheritedWidget
-  static InheritedState of(BuildContext context) {
+  static InheritedState? of(BuildContext context) {
     return context.dependOnInheritedWidgetOfExactType<InheritedState>();
   }
 

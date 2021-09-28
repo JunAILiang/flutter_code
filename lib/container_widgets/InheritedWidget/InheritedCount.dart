@@ -51,7 +51,7 @@ class WidgetA extends StatelessWidget {
 class WidgetB extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Text(InheritedState.of(context)?.count.toString(),
+    return Text(InheritedState.of(context)!.count.toString(),
       style: TextStyle(
         color: Colors.green,
         fontSize: 50
